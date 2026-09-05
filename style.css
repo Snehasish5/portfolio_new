@@ -570,6 +570,7 @@ strong { color: var(--dark); }
   /* NAVBAR */
   .navbar {
     padding: 0 20px;
+    overflow: visible;
   }
 
   .nav-links {
@@ -582,13 +583,17 @@ strong { color: var(--dark); }
     gap: 0;
     padding: 16px 0 24px;
     box-shadow: var(--shadow-lg);
-    clip-path: inset(0 0 100% 0);
-    transition: clip-path 0.4s ease;
+    max-height: 0;
+    overflow: hidden;
+    clip-path: none;
+    transition: max-height 0.4s ease;
     border-top: 2px solid var(--yellow);
+    z-index: 999;
   }
 
   .nav-links.open {
-    clip-path: inset(0 0 0 0);
+    max-height: 500px;
+    clip-path: none;
   }
 
   .nav-links a {
@@ -610,9 +615,9 @@ strong { color: var(--dark); }
   /* HERO */
   .hero-content {
     flex-direction: column-reverse;
-    padding: 40px 20px;
+    padding: 40px 20px 20px;
     text-align: center;
-    gap: 32px;
+    gap: 24px;
   }
 
   .hero-image-wrap {
@@ -629,9 +634,31 @@ strong { color: var(--dark); }
     max-width: 100%;
   }
 
-  .hero-cta,
+  .hero-cta {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-cta .btn-primary,
+  .hero-cta .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
   .hero-social {
     justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .hero {
+    padding-bottom: 40px;
   }
 
   /* ABOUT */
@@ -652,6 +679,16 @@ strong { color: var(--dark); }
 
   .stat-num {
     font-size: 36px;
+  }
+
+  /* FIX 1: Center the Download My CV button */
+  .mt-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
 
   /* TIMELINE */
