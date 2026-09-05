@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snehasish Das | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">Portfolio</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="Snehasish_Das_CV.pdf" download class="btn-cv">
+      <i class="fas fa-download"></i> Download CV
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="hero">
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting reveal-up">Hello, I am</p>
+        <h1 class="hero-name reveal-up delay-1">Snehasish<br /><span class="name-accent">Das</span></h1>
+        <div class="hero-roles reveal-up delay-2">
+          <span class="role-prefix">I am a </span>
+          <span id="typedText" class="typed-text"></span><span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-summary reveal-up delay-3">
+          Computer Science and Engineering student passionate about Data analysis, Backend development and building impactful Full Stack Project that create real value.
+        </p>
+        <div class="hero-cta reveal-up delay-4">
+          <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a href="#contact" class="btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-social reveal-up delay-5">
+          <a href="https://www.linkedin.com/in/snehasish-das-03a896292/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Snehasish5" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:dsnehasish73@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image-wrap reveal-right delay-2">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="ring ring-4"></div>
+        <div class="hero-img-container">
+          <img src="Snehasish_Das_CSE.png" alt="Snehasish Das" class="hero-img"
+               onerror="this.style.display='none';document.getElementById('heroPh').style.display='flex';" />
+          <div class="profile-ph" id="heroPh">SD</div>
+        </div>
+        <div class="float-badge badge-a"><i class="fas fa-code"></i><span>Full-Stack Dev</span></div>
+        <div class="float-badge badge-b"><i class="fas fa-chart-bar"></i><span>Data Analyst</span></div>
+        <div class="float-badge badge-c"><i class="fas fa-code"></i><span>Backend Dev</span></div>
+        <div class="float-badge badge-d"><i class="fas fa-trophy"></i><span>SIH Finalist</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line-anim"></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Who I Am</span>
+        <h2 class="section-title">Profile <span class="accent">Summary</span></h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="about-img-frame">
+            <img src="Snehasish_Das_CSE.png" alt="Snehasish Das"
+                 onerror="this.style.display='none';document.getElementById('aboutPh').style.display='flex';" />
+            <div class="about-ph" id="aboutPh">SD</div>
+            <div class="frame-deco"></div>
+          </div>
+          <div class="about-chips">
+            <div class="about-chip"><i class="fas fa-map-marker-alt"></i><div><span class="chip-label">Location</span><span class="chip-val">Kolkata, India</span></div></div>
+            <div class="about-chip"><i class="fas fa-graduation-cap"></i><div><span class="chip-label">Degree</span><span class="chip-val">B.Tech CSE (2026)</span></div></div>
+            <div class="about-chip"><i class="fas fa-star"></i><div><span class="chip-label">CGPA</span><span class="chip-val">7.39 / 10</span></div></div>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <h3 class="about-heading">Turning Data Into Decisions &amp; Ideas Into Products</h3>
+          <p class="about-text">I am a <strong>Computer Science &amp; Engineering</strong> student at Future Institute of Technology, Kolkata. I have hands-on experience in data analysis, backend development, full stack development and BI dashboard creation.</p>
+          <p class="about-text">Skilled in <strong>Python, SQL, FastAPI, Power BI</strong> and data visualization, I love building applications that extract actionable insights from complex datasets. I enjoy the full journey from raw data to polished product.</p>
+          <p class="about-text">As a <strong>Smart India Hackathon Finalist(2024 &amp; 2025)</strong>, I bring strong analytical thinking, technical troubleshooting, and collaborative energy to every challenge I take on.</p>
+          <div class="about-stats">
+            <div class="stat-box"><span class="stat-num" data-target="0">0</span><span class="stat-plus">+</span><span class="stat-lbl">Years Exp.</span></div>
+            <div class="stat-box"><span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span><span class="stat-lbl">Projects</span></div>
+            <div class="stat-box"><span class="stat-num" data-target="2">0</span><span class="stat-plus"></span><span class="stat-lbl">SIH Finals</span></div>
+          </div>
+          <a href="Snehasish_Das_CV.pdf" download class="btn-primary mt-btn">
+            <i class="fas fa-download"></i> Download My CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I Know</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="skill-cats">
+        <div class="skill-cat reveal-up">
+          <div class="skill-cat-top"><div class="skill-cat-ico"><i class="fas fa-laptop-code"></i></div><h3>Frontend</h3></div>
+          <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
+        </div>
+        <div class="skill-cat reveal-up delay-1">
+          <div class="skill-cat-top"><div class="skill-cat-ico"><i class="fas fa-server"></i></div><h3>Backend</h3></div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">REST APIs</span><span class="tag">JWT Auth</span><span class="tag">bcrypt</span></div>
+        </div>
+        <div class="skill-cat reveal-up delay-2">
+          <div class="skill-cat-top"><div class="skill-cat-ico"><i class="fas fa-chart-line"></i></div><h3>Analytical Tools</h3></div>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Excel</span><span class="tag">DAX</span><span class="tag">Power Query</span></div>
+        </div>
+        <div class="skill-cat reveal-up delay-3">
+          <div class="skill-cat-top"><div class="skill-cat-ico"><i class="fas fa-tools"></i></div><h3>Others</h3></div>
+          <div class="tags"><span class="tag">Git</span><span class="tag">VS Code</span><span class="tag">PyCharm</span><span class="tag">Cursor</span><span class="tag">Google Colab</span><span class="tag">Netlify</span><span class="tag">Render</span><span class="tag">Vercel</span></div>
+        </div>
+      </div>
+      <div class="skill-bars reveal-up delay-2">
+        <h3 class="bars-title">Proficiency Overview</h3>
+        <div class="bar-item"><div class="bar-info"><span>Python</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
+        <div class="bar-item"><div class="bar-info"><span>SQL &amp; Databases</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+        <div class="bar-item"><div class="bar-info"><span>Power BI &amp; Data Viz</span><span>70%</span></div><div class="bar-track"><div class="bar-fill" data-w="70"></div></div></div>
+        <div class="bar-item"><div class="bar-info"><span>FastAPI / Flask</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
+        <div class="bar-item"><div class="bar-info"><span>HTML / CSS</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">My Journey</span>
+        <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal-left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div><h3 class="tl-role">AI Data Annotation Specialist</h3><span class="tl-company"><i class="fas fa-building"></i> Utah Tech Labs</span></div>
+              <span class="tl-date"><i class="far fa-calendar-alt"></i> Sept. 2026 – Present</span>
+            </div>
+            <ul class="tl-list">
+              <li>Perform high-quality data annotation and labelling of multimodal datasets, primarily image data, following project guidelines.</li>
+              <li>Conduct dataset review and validation to improve annotation accuracy, consistency, and reliability.</li>
+              <li>Collaborate with project teams to ensure annotation tasks meet defined standards.</li>
+            </ul>
+            <div class="tl-tags"><span>Data Annotation</span><span>AI/ML</span><span>Quality Assurance</span></div>
+          </div>
+        </div>
+        <div class="tl-item reveal-right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div><h3 class="tl-role">AI Data Annotation Intern</h3><span class="tl-company"><i class="fas fa-building"></i> Utah Tech Labs</span></div>
+              <span class="tl-date"><i class="far fa-calendar-alt"></i> March 2026 – Aug. 2026</span>
+            </div>
+            <ul class="tl-list">
+              <li>Annotated and labelled multi-modal datasets (mainly images) with high accuracy per project guidelines.</li>
+              <li>Reviewed and validated datasets for quality, consistency, and reliability.</li>
+              <li>Achieved productivity targets while maintaining strict data confidentiality standards.</li>
+            </ul>
+            <div class="tl-tags"><span>Data Labelling</span><span>Image Annotation</span><span>Multimodal AI</span></div>
+          </div>
+        </div>
+        <div class="tl-item reveal-left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-head">
+              <div><h3 class="tl-role">B.Tech – Computer Science &amp; Engineering</h3><span class="tl-company"><i class="fas fa-university"></i> Future Institute of Technology, Kolkata</span></div>
+              <span class="tl-date"><i class="far fa-calendar-alt"></i> Aug. 2022 – July 2026</span>
+            </div>
+            <ul class="tl-list">
+              <li>CGPA: 7.39 / 10 — specializing in data analysis, backend development, and software engineering.</li>
+              <li>Participated in Smart India Hackathon 2024 &amp; 2025, reaching the national finals both years.</li>
+              <li>Built full-stack projects combining Python, FastAPI, MongoDB, and Power BI.</li>
+            </ul>
+            <div class="tl-tags"><span>CSE</span><span>B.Tech</span><span>Kolkata</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I Have Built</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- SoleStyle -->
+        <div class="proj-card reveal-up">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-shopping-bag"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/Solestyle_ecommerce" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://solestylee.netlify.app/" target="_blank" class="proj-link" title="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">SoleStyle</h3>
+            <p class="proj-sub">Full-Stack E-Commerce Platform</p>
+            <p class="proj-desc">Built a full-stack shoe e-commerce platform with 25 REST APIs, 12 products, and 5 MongoDB collections using FastAPI, MongoDB Atlas, Razorpay, and Vanilla JavaScript.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> 11 filters, 4 sort modes, full-text search &amp; pagination</li>
+              <li><i class="fas fa-check-circle"></i> Razorpay + HMAC-SHA256 payment verification</li>
+              <li><i class="fas fa-check-circle"></i> bcrypt + 7-day JWT authentication</li>
+            </ul>
+            <div class="proj-tags"><span>FastAPI</span><span>MongoDB</span><span>Motor</span><span>JavaScript</span><span>Razorpay</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- Sales Forecast Dashboard -->
+        <div class="proj-card reveal-up delay-1">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-chart-line"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/Sales_Forecast_Dashboard" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://salesforecastdashboard-3marsux6bmjuyxkgzegmzc.streamlit.app/" target="_blank" class="proj-link proj-link-live" title="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">Sales Data Dashboard</h3>
+            <p class="proj-sub">Python &amp; Streamlit Analytics</p>
+            <p class="proj-desc">Developed a sales forecasting dashboard using Python and Streamlit, delivering region-wise profit insights and predictive analysis for data-driven decision-making.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> Region-wise profit breakdown &amp; trend analysis</li>
+              <li><i class="fas fa-check-circle"></i> Predictive forecasting for business planning</li>
+              <li><i class="fas fa-check-circle"></i> Interactive filters &amp; real-time visualizations</li>
+            </ul>
+            <div class="proj-tags"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Forecasting</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- Ecommerce Sales Dashboard -->
+        <div class="proj-card reveal-up delay-2">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-store"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/madhav_ecommerce_sales_dashboard" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://drive.google.com/file/d/1euZ6doUhjYY7GAxQHV_h94oCgEJwZKRf/view?usp=sharing" target="_blank" class="proj-link proj-link-live" title="Live View"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">Ecommerce Sales Dashboard</h3>
+            <p class="proj-sub">Power BI Annual Sales Report</p>
+            <p class="proj-desc">Created an annual eCommerce sales dashboard in Power BI, analyzing regional performance trends to uncover profit patterns and business growth opportunities.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> Regional performance &amp; profitability breakdown</li>
+              <li><i class="fas fa-check-circle"></i> Year-over-year trend analysis</li>
+              <li><i class="fas fa-check-circle"></i> Business growth opportunity identification</li>
+            </ul>
+            <div class="proj-tags"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Excel</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- IBM HR Analysis -->
+        <div class="proj-card reveal-up delay-3">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-users-cog"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/IBM_HR_analysis" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://drive.google.com/file/d/1X7ALZRLRLbN7sgEiyFm7U7-1KRXx3yQ6/view?usp=sharing" target="_blank" class="proj-link proj-link-live" title="Live View"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">IBM HR Analysis</h3>
+            <p class="proj-sub">Exploratory Data Analysis</p>
+            <p class="proj-desc">Conducted exploratory data analysis on IBM HR Attrition data, identifying key factors influencing employee turnover and workforce retention strategies.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> Key attrition drivers identified via EDA</li>
+              <li><i class="fas fa-check-circle"></i> Workforce retention strategy insights</li>
+              <li><i class="fas fa-check-circle"></i> Statistical analysis with Pandas &amp; Seaborn</li>
+            </ul>
+            <div class="proj-tags"><span>Python</span><span>Pandas</span><span>Seaborn</span><span>EDA</span><span>Matplotlib</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- Blinkit Dashboard -->
+        <div class="proj-card reveal-up">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-bolt"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/blinkit_dashboard" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">Blinkit Dashboard</h3>
+            <p class="proj-sub">Power BI Business Intelligence</p>
+            <p class="proj-desc">Built an interactive Power BI dashboard using Excel data, visualizing key business metrics through dynamic reports to drive actionable insights.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> Dynamic KPI reports from Excel data</li>
+              <li><i class="fas fa-check-circle"></i> Interactive slicers &amp; drill-through analysis</li>
+              <li><i class="fas fa-check-circle"></i> Actionable business metric visualizations</li>
+            </ul>
+            <div class="proj-tags"><span>Power BI</span><span>Excel</span><span>DAX</span><span>Power Query</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- Job Market Analysis Dashboard -->
+        <div class="proj-card reveal-up delay-1">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-chart-pie"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/Job_Market_analysis_dashboard" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">Job Market Analysis Dashboard</h3>
+            <p class="proj-sub">Power BI Data Analytics Project</p>
+            <p class="proj-desc">Designed a Power BI dashboard transforming job market data into insights on compensation trends, remote work impact, and evolving role demand.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> Compensation &amp; salary trend analysis</li>
+              <li><i class="fas fa-check-circle"></i> Remote work impact on job market</li>
+              <li><i class="fas fa-check-circle"></i> 3,000+ records across 10+ roles</li>
+            </ul>
+            <div class="proj-tags"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Excel</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- HR Attrition Website -->
+        <div class="proj-card reveal-up delay-2">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-user-shield"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/hr_dashboard_web" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://hr-dashboard-web-ten.vercel.app/" target="_blank" class="proj-link proj-link-live" title="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">HR Attrition Website</h3>
+            <p class="proj-sub">Analytics Platform — FastAPI + Chart.js</p>
+            <p class="proj-desc">Developed a production-ready analytics platform using FastAPI and Chart.js, delivering interactive visualizations to analyze employee attrition and workforce dynamics.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> Interactive Chart.js visualizations</li>
+              <li><i class="fas fa-check-circle"></i> FastAPI backend with REST endpoints</li>
+              <li><i class="fas fa-check-circle"></i> Deployed live on Vercel</li>
+            </ul>
+            <div class="proj-tags"><span>FastAPI</span><span>Chart.js</span><span>Python</span><span>Vercel</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+        <!-- Blinkit Data Analysis Website -->
+        <div class="proj-card reveal-up delay-3">
+          <div class="proj-inner">
+            <div class="proj-top">
+              <div class="proj-ico"><i class="fas fa-database"></i></div>
+              <div class="proj-links-wrap">
+                <a href="https://github.com/Snehasish5/blinkit_dashboard_website" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://blinkit-dashboard-website.vercel.app/" target="_blank" class="proj-link proj-link-live" title="Live"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="proj-name">Blinkit Data Analysis Website</h3>
+            <p class="proj-sub">Full-Stack Analytics Dashboard</p>
+            <p class="proj-desc">Built an interactive grocery analytics dashboard analyzing 8,523 items using FastAPI and Chart.js, with dynamic filters, 9 visualizations, and real-time insights on $1.2M sales.</p>
+            <ul class="proj-highlights">
+              <li><i class="fas fa-check-circle"></i> 8,523 items &amp; $1.2M sales analyzed</li>
+              <li><i class="fas fa-check-circle"></i> 9 dynamic visualizations with live filters</li>
+              <li><i class="fas fa-check-circle"></i> Deployed live on Vercel</li>
+            </ul>
+            <div class="proj-tags"><span>FastAPI</span><span>Chart.js</span><span>Python</span><span>Vercel</span></div>
+          </div>
+          <div class="proj-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ACHIEVEMENTS ══ -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Milestones</span>
+        <h2 class="section-title">Achievements &amp; <span class="accent">Hackathons</span></h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="ach-grid">
+        <div class="ach-card reveal-up">
+          <div class="ach-ribbon">Finalist</div>
+          <div class="ach-ico"><i class="fas fa-trophy"></i></div>
+          <h3>Smart India Hackathon 2025</h3>
+          <p class="ach-type"><i class="fas fa-code-branch"></i> National Level Hackathon</p>
+          <p class="ach-desc">Reached the national finals of India's largest hackathon, competing among thousands of teams and presenting innovative tech solutions to a panel of expert judges.</p>
+          <div class="ach-date"><i class="far fa-calendar"></i> December 2025</div>
+          <div class="ach-tags"><span>Hackathon</span><span>National</span><span>Innovation</span></div>
+        </div>
+        <div class="ach-card reveal-up delay-1">
+          <div class="ach-ribbon">Finalist</div>
+          <div class="ach-ico"><i class="fas fa-medal"></i></div>
+          <h3>Smart India Hackathon 2024</h3>
+          <p class="ach-type"><i class="fas fa-code-branch"></i> National Level Hackathon</p>
+          <p class="ach-desc">Qualified for the national finals of SIH 2024 — one of the world's biggest open innovation models. Demonstrated analytical and collaborative skills under pressure.</p>
+          <div class="ach-date"><i class="far fa-calendar"></i> December 2024</div>
+          <div class="ach-tags"><span>Hackathon</span><span>National</span><span>Team Work</span></div>
+        </div>
+        <div class="ach-card reveal-up delay-2">
+          <div class="ach-ico"><i class="fas fa-certificate"></i></div>
+          <h3>Promoted to AI Data Annotation Specialist</h3>
+          <p class="ach-type"><i class="fas fa-briefcase"></i> Professional Achievement</p>
+          <p class="ach-desc">Promoted from Intern to full Specialist at Utah Tech Labs in recognition of consistently high annotation accuracy, productivity, and data confidentiality standards.</p>
+          <div class="ach-date"><i class="far fa-calendar"></i> September 2026</div>
+          <div class="ach-tags"><span>AI</span><span>Promotion</span><span>Professional</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Reach Out</span>
+        <h2 class="section-title">Contact <span class="accent">Details</span></h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <h3 class="contact-heading">Let's Connect</h3>
+          <p class="contact-sub">Feel free to reach out through any channel below. I'm always open to new opportunities, collaborations, or just a great conversation!</p>
+          <div class="contact-cards">
+            <a href="mailto:dsnehasish73@gmail.com" class="ccard">
+              <div class="ccard-ico"><i class="fas fa-envelope"></i></div>
+              <div class="ccard-info"><span class="ccard-lbl">Email</span><span class="ccard-val">dsnehasish73@gmail.com</span></div>
+              <i class="fas fa-arrow-right ccard-arr"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/snehasish-das-03a896292/" target="_blank" class="ccard">
+              <div class="ccard-ico li-ico"><i class="fab fa-linkedin-in"></i></div>
+              <div class="ccard-info"><span class="ccard-lbl">LinkedIn</span><span class="ccard-val">snehasish-das-03a896292</span></div>
+              <i class="fas fa-arrow-right ccard-arr"></i>
+            </a>
+            <a href="https://github.com/Snehasish5" target="_blank" class="ccard">
+              <div class="ccard-ico gh-ico"><i class="fab fa-github"></i></div>
+              <div class="ccard-info"><span class="ccard-lbl">GitHub</span><span class="ccard-val">github.com/Snehasish5</span></div>
+              <i class="fas fa-arrow-right ccard-arr"></i>
+            </a>
+            <div class="ccard no-hover">
+              <div class="ccard-ico loc-ico"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="ccard-info"><span class="ccard-lbl">Location</span><span class="ccard-val">Kolkata, West Bengal, India</span></div>
+              <i class="fas fa-location-dot ccard-arr"></i>
+            </div>
+            <div class="ccard no-hover">
+              <div class="ccard-ico ph-ico"><i class="fas fa-phone"></i></div>
+              <div class="ccard-info"><span class="ccard-lbl">Phone</span><span class="ccard-val">(+91) 6290087607</span></div>
+              <i class="fas fa-phone ccard-arr"></i>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <h3 class="form-title">Send a Message</h3>
+            <div class="fgroup">
+              <input type="text" id="fname" placeholder=" " required />
+              <label for="fname">Your Name</label>
+            </div>
+            <div class="fgroup">
+              <input type="email" id="femail" placeholder=" " required />
+              <label for="femail">Your Email</label>
+            </div>
+            <div class="fgroup">
+              <input type="text" id="fsubject" placeholder=" " required />
+              <label for="fsubject">Subject</label>
+            </div>
+            <div class="fgroup">
+              <textarea id="fmsg" rows="5" placeholder=" " required></textarea>
+              <label for="fmsg">Your Message</label>
+            </div>
+            <button type="submit" class="btn-primary form-btn">
+              <span>Send Message</span><i class="fas fa-paper-plane"></i>
+            </button>
+            <div class="form-ok" id="formOk"><i class="fas fa-check-circle"></i> Message sent! I will get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LET'S TALK ══ -->
+  <section class="lets-talk" id="letsTalk">
+    <div class="container">
+      <div class="lt-content reveal-up">
+        <span class="section-label lt-label">Open For Opportunities</span>
+        <h2 class="lt-title">Let's <span class="lt-accent">Talk</span><span class="lt-dot">.</span></h2>
+        <p class="lt-desc">Whether you have a project, a job opportunity, or just want to say hi — my inbox is always open. Let's create something amazing together!</p>
+        <div class="lt-cta">
+          <a href="https://www.linkedin.com/in/snehasish-das-03a896292/" class="btn-white"><i class="fas fa-envelope"></i> Say Hello</a>
+          <a href="Snehasish_Das_CV.pdf" download class="btn-outline-white"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+        <div class="lt-social">
+          <a href="https://www.linkedin.com/in/snehasish-das-03a896292/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Snehasish5" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:dsnehasish73@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Portfolio</div>
+        <p class="footer-copy">Designed &amp; Built by Snehasish Das</p>
+        <div class="footer-nav">
+          <a href="#hero">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
