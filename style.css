@@ -550,7 +550,7 @@ strong { color: var(--dark); }
   /* FIX 3: Use opacity + visibility + transform so border-top NEVER
      bleeds as a yellow line when the menu is closed.
      position:fixed means it never affects document flow. */
-  /* FIX 3: opacity+visibility+transform — border-top stays invisible when closed */
+  /* FIX 3: opacity+visibility+transform — border never bleeds when closed */
   .nav-links {
     position: fixed;
     top: 72px;
@@ -561,9 +561,8 @@ strong { color: var(--dark); }
     flex-direction: column;
     gap: 0;
     padding: 12px 0 20px;
-    border-top: 3px solid var(--yellow);
+    border-top: none;
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    /* CLOSED: fully invisible — border won't bleed */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -577,6 +576,13 @@ strong { color: var(--dark); }
     transform: translateY(0);
     pointer-events: auto;
   }
+
+  /* Suppress navbar yellow border when hamburger menu is open */
+  .navbar.menu-open,
+  .navbar.menu-open.scrolled {
+    border-bottom-color: transparent;
+  }
+
 
   .nav-links a {
     width: 100%;

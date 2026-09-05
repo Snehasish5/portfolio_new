@@ -1,4 +1,4 @@
-﻿/* ═══════════════════════════════════════════════
+/* ═══════════════════════════════════════════════
    SNEHASISH DAS PORTFOLIO - script.js
 ═══════════════════════════════════════════════ */
 
@@ -28,6 +28,7 @@ const navLinks = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
+  navbar.classList.toggle('menu-open');
 });
 
 // Close menu when link is clicked
@@ -35,6 +36,7 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     navLinks.classList.remove('open');
+    navbar.classList.remove('menu-open');
   });
 });
 
