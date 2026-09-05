@@ -531,31 +531,6 @@ strong { color: var(--dark); }
   .badge-b { left: -5%; }
   .badge-c { right: -8%; }
 }
-@media (max-width: 768px) {
-  .navbar { padding: 0 20px; }
-  .nav-links { position: fixed; top: 72px; left: 0; right: 0; background: var(--white); flex-direction: column; gap: 0; padding: 16px 0 24px; box-shadow: var(--shadow-lg); clip-path: inset(0 0 100% 0); transition: clip-path 0.4s ease; border-top: 2px solid var(--yellow); }
-  .nav-links.open { clip-path: inset(0 0 0 0); }
-  .nav-links a { padding: 12px 24px; border-radius: 0; font-size: 14px; }
-  .btn-cv { display: none; }
-  .hamburger { display: flex; }
-  .hero-content { flex-direction: column-reverse; padding: 40px 20px; text-align: center; gap: 32px; }
-  .hero-image-wrap { width: 260px; height: 260px; margin: 0 auto; }
-  .float-badge { display: none; }
-  .hero-text { max-width: 100%; }
-  .hero-cta, .hero-social { justify-content: center; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-img-frame { max-width: 260px; }
-  .about-stats { gap: 16px; padding: 20px; }
-  .stat-num { font-size: 36px; }
-  .timeline::before { left: 20px; }
-  .tl-item, .tl-item:nth-child(even) { justify-content: flex-start; padding: 0 0 0 52px; }
-  .tl-dot { left: 20px; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .ach-grid { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .back-top { bottom: 20px; right: 20px; }
-  .lt-cta { flex-direction: column; align-items: center; }
-}
 @media (max-width: 480px) {
   .section { padding: 72px 0; }
   .hero-image-wrap { width: 220px; height: 220px; }
@@ -567,41 +542,54 @@ strong { color: var(--dark); }
 
 @media (max-width: 767px) {
 
-  /* NAVBAR */
+  /* ── NAVBAR ── */
   .navbar {
     padding: 0 20px;
-    overflow: visible;
   }
 
+  /* FIX 3: Use opacity + visibility + transform so border-top NEVER
+     bleeds as a yellow line when the menu is closed.
+     position:fixed means it never affects document flow. */
+  /* FIX 3: opacity+visibility+transform — border-top stays invisible when closed */
   .nav-links {
     position: fixed;
     top: 72px;
     left: 0;
     right: 0;
+    z-index: 999;
     background: var(--white);
     flex-direction: column;
     gap: 0;
-    padding: 16px 0 24px;
-    box-shadow: var(--shadow-lg);
-    max-height: 0;
-    overflow: hidden;
-    clip-path: none;
-    transition: max-height 0.4s ease;
-    border-top: 2px solid var(--yellow);
-    z-index: 999;
+    padding: 12px 0 20px;
+    border-top: 3px solid var(--yellow);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    /* CLOSED: fully invisible — border won't bleed */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   }
 
   .nav-links.open {
-    max-height: 500px;
-    clip-path: none;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .nav-links a {
     width: 100%;
-    padding: 12px 24px;
+    padding: 13px 24px;
     border-radius: 0;
     font-size: 14px;
+    font-weight: 600;
     text-align: center;
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
   }
 
   .btn-cv {
@@ -611,6 +599,7 @@ strong { color: var(--dark); }
   .hamburger {
     display: flex;
   }
+
 
   /* HERO */
   .hero-content {
