@@ -545,6 +545,14 @@ strong { color: var(--dark); }
   /* ── NAVBAR ── */
   .navbar {
     padding: 0 20px;
+    /* No border-bottom on mobile — prevents yellow line bleeding */
+    border-bottom: none !important;
+  }
+
+  /* On mobile scrolled, only use box-shadow — no border */
+  .navbar.scrolled {
+    border-bottom: none !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
   }
 
   /* FIX 3: Use opacity + visibility + transform so border-top NEVER
@@ -575,12 +583,6 @@ strong { color: var(--dark); }
     visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
-  }
-
-  /* Suppress navbar yellow border when hamburger menu is open */
-  .navbar.menu-open,
-  .navbar.menu-open.scrolled {
-    border-bottom-color: transparent;
   }
 
 
