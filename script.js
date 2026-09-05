@@ -6,20 +6,34 @@
 const navbar = document.getElementById('navbar');
 const backTop = document.getElementById('backTop');
 
+// Force remove border on mobile — inline style beats all CSS
+function fixNavbarBorderOnMobile() {
+  if (window.innerWidth <= 767) {
+    navbar.style.borderBottom = 'none';
+    navbar.style.borderTop = 'none';
+  } else {
+    navbar.style.borderBottom = '';
+    navbar.style.borderTop = '';
+  }
+}
+
 window.addEventListener('scroll', () => {
-  // Navbar shadow on scroll
   if (window.scrollY > 80) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-  // Back-to-top button visibility
+  fixNavbarBorderOnMobile();
   if (window.scrollY > 500) {
     backTop.classList.add('show');
   } else {
     backTop.classList.remove('show');
   }
 });
+
+window.addEventListener('resize', fixNavbarBorderOnMobile);
+document.addEventListener('DOMContentLoaded', fixNavbarBorderOnMobile);
+window.addEventListener('load', fixNavbarBorderOnMobile);
 
 // ── 2. HAMBURGER MOBILE MENU ──
 const hamburger = document.getElementById('hamburger');
@@ -29,6 +43,7 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
   navbar.classList.toggle('menu-open');
+  fixNavbarBorderOnMobile();
 });
 
 // Close menu when link is clicked
@@ -37,6 +52,7 @@ navLinks.querySelectorAll('a').forEach(link => {
     hamburger.classList.remove('open');
     navLinks.classList.remove('open');
     navbar.classList.remove('menu-open');
+    fixNavbarBorderOnMobile();
   });
 });
 
