@@ -596,6 +596,11 @@ strong { color: var(--dark); }
     border-bottom: 1px solid var(--gray-light);
   }
 
+  /* Hide the yellow underline active/hover indicator inside mobile menu */
+  .nav-links a::after {
+    display: none !important;
+  }
+
   .nav-links li:last-child a {
     border-bottom: none;
   }
