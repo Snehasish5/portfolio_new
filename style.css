@@ -29,7 +29,8 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar-track { background: var(--off-white); }
 ::-webkit-scrollbar-thumb { background: var(--yellow); border-radius: 3px; }
 body { font-family: var(--font-body); color: var(--dark); background: var(--white); overflow-x: hidden; }
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+button { -webkit-tap-highlight-color: transparent; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 strong { color: var(--dark); }
@@ -594,6 +595,8 @@ strong { color: var(--dark); }
     font-weight: 600;
     text-align: center;
     border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* removes Android blue box */
   }
 
   /* Hide yellow underline active/hover indicator inside mobile menu */

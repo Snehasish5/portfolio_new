@@ -39,14 +39,15 @@ window.addEventListener('load', fixNavbarBorderOnMobile);
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent document click from immediately closing
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
   navbar.classList.toggle('menu-open');
   fixNavbarBorderOnMobile();
 });
 
-// Close menu when link is clicked
+// Close menu when a nav link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -54,6 +55,16 @@ navLinks.querySelectorAll('a').forEach(link => {
     navbar.classList.remove('menu-open');
     fixNavbarBorderOnMobile();
   });
+});
+
+// Close menu when clicking ANYWHERE outside the navbar
+document.addEventListener('click', (e) => {
+  if (navLinks.classList.contains('open') && !navbar.contains(e.target)) {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    navbar.classList.remove('menu-open');
+    fixNavbarBorderOnMobile();
+  }
 });
 
 // ── 3. ACTIVE NAV LINK HIGHLIGHT ──
