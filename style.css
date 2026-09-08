@@ -724,6 +724,11 @@ strong { color: var(--dark); }
     text-align: center;
   }
 
+  .footer-copy {
+    margin-left: 0;
+    text-align: center;
+  }
+
   /* BACK TO TOP */
   .back-top {
     bottom: 20px;
