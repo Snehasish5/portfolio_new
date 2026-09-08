@@ -593,17 +593,14 @@ strong { color: var(--dark); }
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    border-bottom: 1px solid var(--gray-light);
+    border: none;
   }
 
-  /* Hide the yellow underline active/hover indicator inside mobile menu */
+  /* Hide yellow underline active/hover indicator inside mobile menu */
   .nav-links a::after {
     display: none !important;
   }
 
-  .nav-links li:last-child a {
-    border-bottom: none;
-  }
 
   .btn-cv {
     display: none;
