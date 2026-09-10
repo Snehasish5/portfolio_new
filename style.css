@@ -651,7 +651,7 @@ strong { color: var(--dark); }
   /* Positions relative to the .hero-image-wrap container (240px circle) */
   .badge-a { top: 2%;   right: -8%; }
   .badge-b { bottom: 6%; left: -8%; }
-  .badge-c { bottom: 26%; right: -12%; }
+  .badge-c { bottom: 26%; right: -15%; }
   .badge-d { top: 20%;  left: -8%; }
 
 
