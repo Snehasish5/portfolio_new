@@ -1,12 +1,6 @@
-/* ═══════════════════════════════════════════════
-   SNEHASISH DAS PORTFOLIO - script.js
-═══════════════════════════════════════════════ */
-
-// ── 1. NAVBAR SCROLL EFFECT ──
 const navbar = document.getElementById('navbar');
 const backTop = document.getElementById('backTop');
 
-// Force remove border on mobile — inline style beats all CSS
 function fixNavbarBorderOnMobile() {
   if (window.innerWidth <= 767) {
     navbar.style.borderBottom = 'none';
@@ -35,19 +29,17 @@ window.addEventListener('resize', fixNavbarBorderOnMobile);
 document.addEventListener('DOMContentLoaded', fixNavbarBorderOnMobile);
 window.addEventListener('load', fixNavbarBorderOnMobile);
 
-// ── 2. HAMBURGER MOBILE MENU ──
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', (e) => {
-  e.stopPropagation(); // prevent document click from immediately closing
+  e.stopPropagation(); 
   hamburger.classList.toggle('open');
   navLinks.classList.toggle('open');
   navbar.classList.toggle('menu-open');
   fixNavbarBorderOnMobile();
 });
 
-// Close menu when a nav link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -57,7 +49,6 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Close menu when clicking ANYWHERE outside the navbar
 document.addEventListener('click', (e) => {
   if (navLinks.classList.contains('open') && !navbar.contains(e.target)) {
     hamburger.classList.remove('open');
@@ -67,7 +58,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// ── 3. ACTIVE NAV LINK HIGHLIGHT ──
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-link');
 
@@ -83,7 +73,6 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(sec => navObserver.observe(sec));
 
-// ── 4. TYPED TEXT ANIMATION ──
 const roles = ['Full Stack Developer','Data Analyst', 'Backend Developer', 'Python Developer', 'Power BI Expert'];
 let roleIndex = 0;
 let charIndex = 0;
@@ -116,7 +105,6 @@ function typeText() {
 
 setTimeout(typeText, 800);
 
-// ── 5. PARTICLES CANVAS ANIMATION ──
 const canvas = document.getElementById('particlesCanvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
@@ -199,21 +187,19 @@ window.addEventListener('resize', () => {
   initParticles();
 });
 
-// ── 6. SCROLL REVEAL ANIMATIONS ──
 const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target); // animate once
+      revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ── 7. ANIMATED COUNTERS ──
 const statNums = document.querySelectorAll('.stat-num');
 
 function animateCounter(el) {
@@ -242,7 +228,6 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 statNums.forEach(el => counterObserver.observe(el));
 
-// ── 8. SKILL BAR ANIMATION ──
 const barFills = document.querySelectorAll('.bar-fill');
 
 const barObserver = new IntersectionObserver((entries) => {
@@ -259,7 +244,6 @@ const barObserver = new IntersectionObserver((entries) => {
 
 barFills.forEach(bar => barObserver.observe(bar));
 
-// ── 9. CONTACT FORM HANDLER ──
 const contactForm = document.getElementById('contactForm');
 const formOk = document.getElementById('formOk');
 
@@ -291,14 +275,12 @@ if (contactForm) {
   });
 }
 
-// ── 10. BACK TO TOP BUTTON ──
 if (backTop) {
   backTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 
-// ── 11. SMOOTH SCROLLING FOR ANCHORS ──
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
@@ -306,14 +288,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
-      const offset = 72; // navbar height
+      const offset = 72;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   });
 });
 
-// ── 12. CURSOR GLOW EFFECT ──
 const cursorGlow = document.getElementById('cursorGlow');
 
 if (cursorGlow) {
@@ -334,7 +315,6 @@ if (cursorGlow) {
   }
   animateCursor();
 
-  // Enlarge on hover over interactive elements
   const interactives = document.querySelectorAll('a, button, .ccard, .proj-card, .ach-card, .skill-cat, .float-badge');
   interactives.forEach(el => {
     el.addEventListener('mouseenter', () => {
@@ -350,7 +330,6 @@ if (cursorGlow) {
   });
 }
 
-// ── 13. HERO IMAGE PARALLAX SUBTLE ──
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   const hero = document.querySelector('.hero');
@@ -362,7 +341,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ── 14. TRIGGER REVEAL FOR HERO ELEMENTS ON LOAD ──
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.querySelectorAll('.hero .reveal-up, .hero .reveal-right').forEach(el => {
