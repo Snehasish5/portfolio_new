@@ -628,8 +628,12 @@ strong { color: var(--dark); }
     margin: 0 auto;
   }
 
-  .float-badge {
-    display: none;
+  .float-badge,
+  .badge-a,
+  .badge-b,
+  .badge-c,
+  .badge-d {
+    display: none !important;
   }
 
   .hero-text {
