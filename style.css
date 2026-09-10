@@ -211,9 +211,10 @@ strong { color: var(--dark); }
   animation: floatBadge 4s ease-in-out infinite;
 }
 .float-badge i { color: var(--yellow-dark); font-size: 16px; }
-.badge-a { top: 8%; right: -10%; animation-delay: 0s; }
+.badge-a { top: 8%;  right: -10%; animation-delay: 0s; }
 .badge-b { bottom: 12%; left: -12%; animation-delay: 1.5s; }
 .badge-c { bottom: 30%; right: -14%; animation-delay: 0.8s; }
+.badge-d { top: 22%; left: -14%; animation-delay: 2.2s; }
 @keyframes floatBadge {
   0%,100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -623,9 +624,10 @@ strong { color: var(--dark); }
   }
 
   .hero-image-wrap {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
     margin: 0 auto;
+    overflow: visible;
   }
 
   .float-badge,
@@ -633,8 +635,25 @@ strong { color: var(--dark); }
   .badge-b,
   .badge-c,
   .badge-d {
-    display: none !important;
+    display: flex !important;
+    font-size: 10px;
+    padding: 5px 9px;
+    gap: 5px;
+    white-space: nowrap;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
+
+  .float-badge i {
+    font-size: 11px;
+  }
+
+  /* Positions relative to the .hero-image-wrap container (240px circle) */
+  .badge-a { top: 2%;   right: -8%; }
+  .badge-b { bottom: 6%; left: -8%; }
+  .badge-c { bottom: 26%; right: -8%; }
+  .badge-d { top: 20%;  left: -8%; }
+
 
   .hero-text {
     max-width: 100%;
